@@ -178,10 +178,10 @@ class MQTTPlayer(xbmc.Player):
     def onPlayBackStopped(self):
         setplaystate(0,"stopped")
 
-    def onPlayBackSeek(self):
+    def onPlayBackSeek(self, time, seek_offset):
         publishprogress()
 
-    def onPlayBackSeekChapter(self):
+    def onPlayBackSeekChapter(self, chapter):
         publishprogress()
 
     def onPlayBackSpeedChanged(self,speed):
